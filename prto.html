@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Verlando Akbar Nugraha</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="floating-icons">
+        <i class="floating-icon fas fa-code" style="left: 10%; animation-delay: 0s;"></i>
+        <i class="floating-icon fas fa-laptop" style="left: 20%; animation-delay: 2s;"></i>
+        <i class="floating-icon fas fa-database" style="left: 30%; animation-delay: 4s;"></i>
+        <i class="floating-icon fas fa-mobile-alt" style="left: 40%; animation-delay: 6s;"></i>
+        <i class="floating-icon fas fa-server" style="left: 50%; animation-delay: 8s;"></i>
+        <i class="floating-icon fas fa-cloud" style="left: 60%; animation-delay: 10s;"></i>
+        <i class="floating-icon fas fa-cogs" style="left: 70%; animation-delay: 12s;"></i>
+        <i class="floating-icon fas fa-rocket" style="left: 80%; animation-delay: 14s;"></i>
+        <i class="floating-icon fas fa-bug" style="left: 90%; animation-delay: 16s;"></i>
+    </div>
+    
+    <header class="header">
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-img-container">
+                    <img src="sertif/me.jpeg" alt="Profile Picture" class="profile-img">
+                </div>
+                <div class="profile-info">
+                    <h1>Verlando Akbar Nugraha</h1>
+                    <p class="subtitle typing-animation">Full Stack Developer</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/6283170604256" class="social-link" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:verlandoakbar77@gmail.com" class="social-link" target="_blank" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/Verlando-AN" class="social-link" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="download-cv" onclick="downloadCV()">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="card">
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Seorang Full Stack Developer freelance dengan latar belakang akademis dari Universitas Teknokrat Indonesia. 
+                        Berpengalaman luas dalam pengembangan aplikasi web menggunakan Laravel dan aplikasi mobile dengan Flutter, 
+                        baik untuk proyek pribadi maupun klien. Memiliki kemampuan problem-solving yang kuat dan dapat bekerja efektif dalam tim.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Pendidikan</h2>
+                <div class="card education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>Sarjana Informatika</h3>
+                            <p>Universitas Teknokrat Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="education-details">
+                        <div class="education-detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>2021 - 2025</span>
+                        </div>
+                        <div class="education-detail-item">
+                            <i class="fas fa-university"></i>
+                            <span>Fakultas Teknik dan Ilmu Komputer</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Keahlian</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML5/CSS3</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React.js</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><i class="fas fa-server"></i> Backend Development</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Laravel</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><i class="fas fa-tools"></i> Mobile & Tools</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Flutter</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Android Studio</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Figma</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Pengalaman</h2>
+                <div class="grid">
+                    <div class="card experience-card">
+                        <h3>Magang Full Stack Developer</h3>
+                        <span class="experience-date">Jul 2024 - Sep 2024</span>
+                        <p><strong>PT Microdata Indonesia</strong></p>
+                        <ul>
+                            <li>Membangun dan mengembangkan aplikasi web Manajemen Inventaris berbasis Laravel</li>
+                            <li>Berkolaborasi dengan tim front-end untuk memastikan integrasi API yang mulus</li>
+                            <li>Melakukan pengujian unit dan debugging untuk mengoptimalkan performa aplikasi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card experience-card">
+                        <h3>Programmer Freelance</h3>
+                        <span class="experience-date">2023 - Sekarang</span>
+                        <ul>
+                            <li>Mengembangkan berbagai website menggunakan React.js, Node.js, Laravel, CI4 dan NET</li>
+                            <li>Mengembangkan berbagai aplikasi mobile berbasis Android Studio dan Flutter</li>
+                            <li>Merancang dan mengimplementasikan API untuk aplikasi website</li>
+                            <li>Berkomunikasi langsung dengan klien untuk mengumpulkan persyaratan proyek</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/news.png" alt="TeknoNews App" data-title="TeknoNews App" data-description="Aplikasi mobile berita teknologi dengan fitur bookmark dan notifikasi. Dibangun dengan Flutter dan Firebase.">
+                        <div class="gallery-overlay">
+                            <h3>TeknoNews</h3>
+                            <p>Website berita kampus (2023)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/inventori.png" alt="Inventory Management System" data-title="Inventory Management System" data-description="Aplikasi web untuk mengelola stok dengan fitur CRUD, autentikasi, dan dashboard analitik. Dibangun dengan Laravel, MySQL, dan Bootstrap.">
+                        <div class="gallery-overlay">
+                            <h3>Inventory Management System</h3>
+                            <p>Sistem manajemen inventaris (2024)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/galery.png" alt="Gallery Keripik Lampung" data-title="Gallery Keripik Lampung" data-description="Website e-commerce untuk menjual olahan kripik Lampung dengan UI interaktif dan API logistik serta pembayaran otomatis. Dibangun dengan Laravel, JavaScript, MySQL, dan Bootstrap.">
+                        <div class="gallery-overlay">
+                            <h3>Gallery Keripik Lampung</h3>
+                            <p>Website e-commerce (2025)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Sertifikat & Penghargaan</h2>
+                <div class="certificate-gallery">
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/WP.PNG" alt="Web Programmer" data-title="Web Programmer" data-description="Sertifikasi Teknis - Web Programmer (2024)">
+                        <div class="gallery-overlay">
+                            <h3>Web Programmer</h3>
+                            <p>Sertifikasi Teknis (2024)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/SOP.PNG" alt="Service Oriented Programmer" data-title="Service Oriented Programmer" data-description="Sertifikasi Teknis - Service Oriented Programmer (2024)">
+                        <div class="gallery-overlay">
+                            <h3>Service Oriented Programmer</h3>
+                            <p>Sertifikasi Teknis (2024)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/IS.PNG" alt="Information Security" data-title="Information Security" data-description="Sertifikasi Teknis - Information Security (2024)">
+                        <div class="gallery-overlay">
+                            <h3>Information Security</h3>
+                            <p>Sertifikasi Teknis (2024)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/BAI ll.PNG" alt="Basic Artificial Intelligence II" data-title="Basic Artificial Intelligence II" data-description="Sertifikasi Teknis - Basic Artificial Intelligence II (2024)">
+                        <div class="gallery-overlay">
+                            <h3>Basic Artificial Intelligence II</h3>
+                            <p>Sertifikasi Teknis (2024)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/SGD.PNG" alt="Senior Game Developer" data-title="Senior Game Developer" data-description="Sertifikasi Teknis - Senior Game Developer (2024)">
+                        <div class="gallery-overlay">
+                            <h3>Senior Game Developer</h3>
+                            <p>Sertifikasi Teknis (2024)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openModal(this)">
+                        <img src="sertif/Verlando Akbar Nugraha.png" alt="Juara 2nd Academic Expo" data-title="Juara 2nd Academic Expo" data-description="Penghargaan - Juara 2nd Academic Expo (2024)">
+                        <div class="gallery-overlay">
+                            <h3>Intern at PT. Microdata Indonesia</h3>
+                            <p>Penghargaan (2025)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="card contact-card">
+                    <h3>Mari Berkolaborasi!</h3>
+                    <p>Saya selalu terbuka untuk kesempatan kerjasama baru. Jangan ragu untuk menghubungi saya!</p>
+                    <div class="social-linksss" style="justify-content: center;">
+                        <a href="https://wa.me/6283170604256" class="social-linkss" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:verlandoakbar77@gmail.com" class="social-linkss" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/Verlando-AN" class="social-linkss" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
