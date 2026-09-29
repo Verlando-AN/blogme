@@ -423,21 +423,26 @@ button, input, textarea, select {
 }
 
 .chip-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
+    margin: 0;
+    padding-left: 1.2rem;
+    display: block;
 }
 
 .chip-list span {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 0.8rem;
-    border-radius: 999px;
-    background: var(--chip-bg);
+    display: list-item;
+    list-style: disc;
+    padding: 0;
+    margin-bottom: 0.45rem;
+    background: transparent;
     color: var(--text);
-    border: 1px solid rgba(29, 78, 216, 0.08);
-    font-size: 0.87rem;
+    border: none;
+    border-radius: 0;
+    font-size: 0.95rem;
     font-weight: 500;
+}
+
+.chip-list span:last-child {
+    margin-bottom: 0;
 }
 
 .timeline {
