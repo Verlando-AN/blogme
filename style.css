@@ -1,35 +1,15 @@
 :root {
-    --bg: #f4f6f8;
-    --bg-strong: #0f172a;
+    --bg: #f3f5f7;
     --surface: #ffffff;
-    --surface-alt: #eef3f8;
+    --surface-alt: #f7f9fb;
     --text: #111827;
     --text-soft: #4b5563;
     --primary: #111827;
     --secondary: #1f2937;
-    --accent: #2f5d9f;
-    --accent-soft: rgba(47, 93, 159, 0.12);
-    --border: rgba(17, 24, 39, 0.08);
-    --shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
-    --gradient: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
-    --chip-bg: rgba(47, 93, 159, 0.06);
-}
-
-[data-theme="dark"] {
-    --bg: #0f172a;
-    --bg-strong: #020817;
-    --surface: #111827;
-    --surface-alt: #172033;
-    --text: #f8fafc;
-    --text-soft: #cbd5e1;
-    --primary: #f8fafc;
-    --secondary: #dbeafe;
-    --accent: #8ab4ff;
-    --accent-soft: rgba(138, 180, 255, 0.12);
-    --border: rgba(148, 163, 184, 0.18);
-    --shadow: 0 18px 38px rgba(2, 8, 23, 0.35);
-    --gradient: linear-gradient(135deg, #0f172a 0%, #111827 100%);
-    --chip-bg: rgba(138, 180, 255, 0.08);
+    --accent: #1f2937;
+    --border: #d8e0e8;
+    --shadow: 0 8px 18px rgba(17, 24, 39, 0.03);
+    --chip-bg: #eef3f8;
 }
 
 * {
@@ -39,7 +19,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
@@ -47,7 +27,6 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.7;
-    transition: background 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
 }
 
@@ -68,32 +47,14 @@ button, input, textarea, select {
 
 .header {
     position: relative;
-    background: var(--gradient);
-    color: white;
+    background: var(--primary);
+    color: #ffffff;
     padding: 1.5rem 0 4rem;
-    overflow: hidden;
 }
 
-.header::before {
-    content: "";
-    position: absolute;
-    right: -80px;
-    top: -80px;
-    width: 260px;
-    height: 260px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50%;
-}
-
+.header::before,
 .header::after {
-    content: "";
-    position: absolute;
-    left: -80px;
-    bottom: -100px;
-    width: 220px;
-    height: 220px;
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 50%;
+    display: none;
 }
 
 .topbar,
@@ -103,10 +64,7 @@ button, input, textarea, select {
     display: none !important;
 }
 
-
 .hero {
-    position: relative;
-    z-index: 1;
     display: grid;
     grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
     align-items: center;
@@ -125,10 +83,10 @@ button, input, textarea, select {
     gap: 0.5rem;
     padding: 0.45rem 0.9rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.08);
     color: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    font-size: 0.76rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-weight: 600;
@@ -149,22 +107,6 @@ button, input, textarea, select {
     font-size: 1.12rem;
 }
 
-.typing-animation {
-    border-right: 2px solid rgba(255, 255, 255, 0.85);
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3.5s steps(30, end) 1, blink 0.8s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
 .hero-meta {
     margin-top: 1.5rem;
     display: flex;
@@ -178,8 +120,8 @@ button, input, textarea, select {
     gap: 0.55rem;
     padding: 0.65rem 0.9rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     font-size: 0.92rem;
     color: rgba(255, 255, 255, 0.9);
     word-break: break-word;
@@ -201,20 +143,15 @@ button, input, textarea, select {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
     color: var(--text);
     background: rgba(255, 255, 255, 0.96);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 22px rgba(15, 23, 42, 0.16);
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    box-shadow: none;
+    transition: none;
 }
 
 .download-cv {
@@ -223,18 +160,13 @@ button, input, textarea, select {
     justify-content: center;
     gap: 0.6rem;
     padding: 0.85rem 1.3rem;
-    border-radius: 999px;
+    border-radius: 12px;
     background: #ffffff;
     color: var(--primary);
     text-decoration: none;
     font-weight: 600;
-    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.download-cv:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 24px rgba(15, 23, 42, 0.18);
+    box-shadow: none;
+    transition: none;
 }
 
 .profile-card {
@@ -246,19 +178,15 @@ button, input, textarea, select {
 .profile-frame {
     position: relative;
     overflow: hidden;
-    border-radius: 32px;
-    padding: 1rem;
+    border-radius: 18px;
+    padding: 0.75rem;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: none;
 }
 
 .profile-frame::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.18), transparent 50%);
+    display: none;
 }
 
 .profile-img {
@@ -266,32 +194,11 @@ button, input, textarea, select {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: 12px;
 }
 
 .availability-badge {
-    position: absolute;
-    left: 50%;
-    bottom: 18px;
-    transform: translateX(-50%);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    padding: 0.7rem 1rem;
-    border-radius: 999px;
-    background: rgba(15, 23, 42, 0.8);
-    color: white;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
-    font-size: 0.85rem;
-}
-
-.status-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #22c55e;
-    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+    display: none;
 }
 
 .main-content {
@@ -304,7 +211,7 @@ button, input, textarea, select {
     gap: 0.8rem;
     margin-bottom: 2rem;
     padding: 0.8rem;
-    border-radius: 18px;
+    border-radius: 14px;
     background: var(--surface);
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
@@ -315,22 +222,21 @@ button, input, textarea, select {
     background: transparent;
     color: var(--text-soft);
     padding: 0.8rem 1.1rem;
-    border-radius: 12px;
+    border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: none;
 }
 
 .tab-btn.active {
     background: var(--surface-alt);
     color: var(--primary);
     border-color: var(--border);
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+    box-shadow: none;
 }
 
 .tab-panel {
     display: none;
-    animation: fadeIn 0.3s ease;
 }
 
 .tab-panel.active {
@@ -345,7 +251,7 @@ button, input, textarea, select {
     width: 100%;
     max-height: 720px;
     object-fit: contain;
-    border-radius: 18px;
+    border-radius: 0;
     background: rgba(15, 23, 42, 0.04);
 }
 
@@ -361,11 +267,13 @@ button, input, textarea, select {
     background: var(--chip-bg);
     color: var(--secondary);
     border-color: transparent;
+    border-radius: 999px;
     margin-bottom: 1rem;
 }
 
 .dark-tag {
-    background: rgba(15, 23, 42, 0.08);
+    background: rgba(15, 23, 42, 0.06);
+    color: var(--primary);
 }
 
 .section-title {
@@ -378,7 +286,7 @@ button, input, textarea, select {
 .card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 2rem;
     box-shadow: var(--shadow);
     position: relative;
@@ -390,8 +298,8 @@ button, input, textarea, select {
     position: absolute;
     inset: 0 auto auto 0;
     width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, rgba(47,93,159,0.85), rgba(17,24,39,0.08));
+    height: 2px;
+    background: rgba(17, 24, 39, 0.1);
 }
 
 .about-card p {
@@ -445,86 +353,6 @@ button, input, textarea, select {
     margin-bottom: 0;
 }
 
-.timeline {
-    position: relative;
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 17px;
-    top: 12px;
-    bottom: 12px;
-    width: 2px;
-    background: rgba(29, 78, 216, 0.15);
-}
-
-.timeline-item {
-    position: relative;
-    display: grid;
-    grid-template-columns: 36px 1fr;
-    gap: 1rem;
-    align-items: start;
-}
-
-.timeline-dot {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--gradient);
-    border: 5px solid var(--bg);
-    box-shadow: 0 0 0 6px rgba(29, 78, 216, 0.12);
-    position: relative;
-    z-index: 1;
-}
-
-.timeline-content {
-    padding: 1.6rem 1.5rem;
-}
-
-.timeline-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
-}
-
-.timeline-content h3 {
-    margin: 0 0 0.2rem;
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
-}
-
-.company {
-    color: var(--text-soft);
-    font-weight: 500;
-}
-
-.experience-date {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    font-size: 0.8rem;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.timeline-content ul {
-    margin: 0;
-    padding-left: 1.3rem;
-    color: var(--text-soft);
-}
-
-.timeline-content li + li {
-    margin-top: 0.6rem;
-}
-
 .project-gallery,
 .certificate-gallery {
     display: grid;
@@ -535,35 +363,26 @@ button, input, textarea, select {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 22px;
+    border-radius: 14px;
     aspect-ratio: 16 / 10;
     cursor: pointer;
     box-shadow: var(--shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 24px 40px rgba(15, 23, 42, 0.18);
+    transition: none;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.35s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
+    transition: none;
 }
 
 .gallery-overlay {
     position: absolute;
     inset: auto 0 0 0;
     padding: 1.2rem 1rem;
-    background: linear-gradient(to top, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.15), transparent);
-    color: white;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.2), transparent);
+    color: #ffffff;
 }
 
 .gallery-overlay h3 {
@@ -611,7 +430,7 @@ button, input, textarea, select {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(2, 6, 23, 0.86);
+    background: rgba(2, 6, 23, 0.85);
     z-index: 999;
     padding: 2rem;
 }
@@ -620,10 +439,10 @@ button, input, textarea, select {
     position: relative;
     max-width: 920px;
     margin: 3% auto;
-    background: rgba(15, 23, 42, 0.92);
-    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.96);
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.35);
+    box-shadow: none;
 }
 
 .modal-content img {
@@ -695,8 +514,6 @@ button, input, textarea, select {
     .subtitle {
         font-size: 1rem;
         white-space: normal;
-        border-right: none;
-        animation: none;
     }
 
     .hero-meta {
@@ -727,27 +544,8 @@ button, input, textarea, select {
         font-size: 0.9rem;
     }
 
-    .card,
-    .timeline-content {
+    .card {
         padding: 1.2rem;
-    }
-
-    .timeline-item {
-        grid-template-columns: 28px 1fr;
-    }
-
-    .timeline::before {
-        left: 13px;
-    }
-
-    .timeline-dot {
-        width: 28px;
-        height: 28px;
-    }
-
-    .timeline-top {
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .project-gallery,

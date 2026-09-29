@@ -80,17 +80,3 @@ function toggleTheme() {
             }
         }
         
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                const target = targetId ? document.querySelector(targetId) : null;
-
-                if (!target) return;
-
-                e.preventDefault();
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
