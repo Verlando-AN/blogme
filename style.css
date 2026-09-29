@@ -154,21 +154,6 @@ button, input, textarea, select {
     transition: none;
 }
 
-.download-cv {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    padding: 0.85rem 1.3rem;
-    border-radius: 12px;
-    background: #ffffff;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: none;
-    transition: none;
-}
-
 .profile-card {
     justify-self: center;
     position: relative;

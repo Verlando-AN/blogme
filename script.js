@@ -60,19 +60,6 @@ function toggleTheme() {
             document.getElementById('imageModal').style.display = 'none';
         }
         
-        function downloadCV(event) {
-            if (event) {
-                event.preventDefault();
-            }
-
-            const link = document.createElement("a");
-            link.href = "sertif/CV2.pdf";
-            link.download = "CV2.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-        
         window.onclick = function(event) {
             const modal = document.getElementById('imageModal');
             if (event.target == modal) {
