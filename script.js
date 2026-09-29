@@ -21,9 +21,25 @@ function toggleTheme() {
             
             if (savedTheme === 'dark') {
                 document.body.setAttribute('data-theme', 'dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
+                if (themeIcon) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                }
             }
+
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+
+            tabButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const target = button.dataset.tab;
+
+                    tabButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
+                    tabPanels.forEach((panel) => {
+                        panel.classList.toggle('active', panel.id === `${target}-panel`);
+                    });
+                });
+            });
         });
         
         function openModal(element) {
@@ -44,11 +60,17 @@ function toggleTheme() {
             document.getElementById('imageModal').style.display = 'none';
         }
         
-        function downloadCV() {
+        function downloadCV(event) {
+            if (event) {
+                event.preventDefault();
+            }
+
             const link = document.createElement("a");
-                link.href = "sertif/CV2.pdf";  
-                link.download = "CV2.pdf";    
-                link.click();
+            link.href = "sertif/CV2.pdf";
+            link.download = "CV2.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
         
         window.onclick = function(event) {
@@ -60,9 +82,15 @@ function toggleTheme() {
         
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                const target = targetId ? document.querySelector(targetId) : null;
+
+                if (!target) return;
+
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             });
         });
